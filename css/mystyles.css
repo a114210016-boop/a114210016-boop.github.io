@@ -1,0 +1,570 @@
+
+/* =====================================================
+   林柏聖｜第九週 CSS 客製化
+   Personal Resume Website
+   ===================================================== */
+
+
+/* =========================================
+   1. CSS 變數與主題色彩
+========================================= */
+
+:root {
+    --bs-primary: #bd5d38;
+    --bs-primary-rgb: 189, 93, 56;
+
+    --resume-orange: #bd5d38;
+    --resume-orange-dark: #914326;
+
+    --resume-dark: #343a40;
+    --resume-light: #fffaf6;
+    --resume-cream: #f8eee7;
+
+    --resume-border: #eadbd1;
+
+    --resume-shadow:
+        0 10px 30px rgba(70, 45, 30, 0.08);
+}
+
+
+/* =========================================
+   2. 全站中文字體
+========================================= */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+div,
+li {
+    font-family:
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        sans-serif;
+}
+
+body {
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+    color: var(--resume-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 900;
+    text-transform: none;
+    color: var(--resume-dark);
+}
+
+
+/* =========================================
+   3. 網站主題色彩
+========================================= */
+
+a,
+.text-primary,
+.subheading {
+    color: var(--resume-orange) !important;
+}
+
+a:hover {
+    color: var(--resume-orange-dark) !important;
+}
+
+
+/* =========================================
+   4. 左側導覽列
+========================================= */
+
+#sideNav {
+    background:
+        linear-gradient(
+            160deg,
+            #bd5d38,
+            #914326
+        ) !important;
+}
+
+#sideNav .nav-link {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+#sideNav .nav-link:hover {
+    color: #ffffff !important;
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   5. 個人照片
+========================================= */
+
+.img-profile {
+    border: 6px solid rgba(255,255,255,0.25);
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.img-profile:hover {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   6. 社群圖示
+========================================= */
+
+.social-icon {
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--resume-orange) !important;
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   7. 履歷區塊背景與邊界
+========================================= */
+
+.resume-section {
+    position: relative;
+    background-color: var(--resume-light);
+    border-bottom: 1px solid var(--resume-border);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.resume-section:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
+.resume-section-content {
+    max-width: 1150px;
+}
+
+.resume-section h2 {
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+
+/* =========================================
+   8. 經歷卡片
+========================================= */
+
+.resume-item {
+    background-color: #ffffff;
+    border: 1px solid var(--resume-border);
+    border-left: 5px solid var(--resume-orange);
+    border-radius: 14px;
+
+    padding: 25px;
+    margin-bottom: 22px;
+
+    box-shadow: var(--resume-shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.resume-item:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(70, 45, 30, 0.12);
+}
+
+.resume-item p {
+    color: #68727c;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   9. 專業技能圖示
+========================================= */
+
+.dev-icons {
+    color: var(--resume-orange);
+}
+
+.dev-icons li {
+    transition: transform 0.3s ease;
+}
+
+.dev-icons li:hover {
+    transform: translateY(-5px);
+}
+
+.fa-ul li {
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   10. 作品集介紹文字
+========================================= */
+
+.portfolio-intro {
+    color: #777777;
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================
+   11. Bento Box 便當盒排版
+========================================= */
+
+.bento-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    grid-auto-rows: minmax(240px, auto);
+
+    gap: 22px;
+
+    margin-top: 25px;
+}
+
+
+/* 作品卡片基本設定 */
+
+.bento-item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px;
+
+    min-height: 260px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    border: 1px solid var(--resume-border);
+
+    background-color: #ffffff;
+
+    box-shadow: var(--resume-shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* 滑鼠移過作品卡片 */
+
+.bento-item:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 40px rgba(70, 45, 30, 0.15);
+}
+
+
+/* 第一個作品：大型卡片 */
+
+.bento-feature {
+    grid-row: span 2;
+
+    min-height: 540px;
+
+    justify-content: flex-end;
+
+    background:
+        linear-gradient(
+            145deg,
+            #bd5d38,
+            #873d27
+        );
+
+    color: #ffffff;
+}
+
+.bento-feature h3,
+.bento-feature p {
+    color: #ffffff;
+}
+
+
+/* 第二個作品：橘色 */
+
+.bento-orange {
+    background-color: #f5e3d8;
+}
+
+
+/* 第三個作品：深色 */
+
+.bento-dark {
+    background-color: #343a40;
+}
+
+.bento-dark h3,
+.bento-dark p {
+    color: #ffffff;
+}
+
+
+/* 第四個作品：淺色 */
+
+.bento-light {
+    background-color: #f5eee8;
+}
+
+
+/* 作品編號 */
+
+.bento-number {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    font-size: 2.5rem;
+
+    font-weight: 900;
+
+    opacity: 0.15;
+}
+
+
+/* 作品分類 */
+
+.bento-category {
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-bottom: 15px;
+
+    padding: 6px 13px;
+
+    border-radius: 30px;
+
+    background-color: rgba(189, 93, 56, 0.12);
+
+    color: var(--resume-orange-dark);
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+}
+
+
+/* 大型卡片分類 */
+
+.bento-feature .bento-category {
+    color: #ffffff;
+
+    background-color:
+        rgba(255,255,255,0.18);
+}
+
+
+/* 作品圖示 */
+
+.bento-icon {
+    font-size: 2.3rem;
+
+    margin: 15px 0;
+
+    color: var(--resume-orange);
+}
+
+.bento-feature .bento-icon {
+    color: #ffffff;
+}
+
+.bento-dark .bento-icon {
+    color: #f3b49a;
+}
+
+
+/* 作品標題 */
+
+.bento-item h3 {
+    font-size: 1.4rem;
+
+    font-weight: 900;
+
+    margin-bottom: 15px;
+}
+
+
+/* 作品說明 */
+
+.bento-item p {
+    color: #68727c;
+
+    font-size: 0.95rem;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+.bento-feature p {
+    color: rgba(255,255,255,0.9);
+}
+
+
+/* 作品連結 */
+
+.bento-item a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    margin-top: auto;
+
+    padding-top: 10px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    color: var(--resume-orange) !important;
+}
+
+.bento-item a:hover {
+    color: var(--resume-orange-dark) !important;
+
+    text-decoration: underline;
+}
+
+.bento-feature a {
+    color: #ffffff !important;
+}
+
+
+/* =========================================
+   12. 頁尾
+========================================= */
+
+.site-footer {
+    padding: 30px 20px;
+
+    background-color: var(--resume-dark);
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+.site-footer p {
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.site-footer a {
+    color: #f3b49a !important;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   13. 平板版面
+========================================= */
+
+@media (max-width: 991px) {
+
+    .resume-section {
+        padding: 4rem 2rem;
+    }
+
+    .bento-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================
+   14. 手機版面
+========================================= */
+
+@media (max-width: 767px) {
+
+    .resume-section {
+        padding: 3rem 1.3rem;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .bento-item,
+    .bento-feature {
+        grid-row: auto;
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .bento-feature {
+        min-height: 350px;
+    }
+
+    .bento-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-intro {
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* =========================================
+   15. 平滑捲動與互動效果
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+a,
+button {
+    transition: all 0.3s ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid rgba(189,93,56,0.5);
+    outline-offset: 4px;
+}

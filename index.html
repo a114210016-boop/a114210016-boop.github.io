@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="林柏聖">
   <meta name="description" content="林柏聖的個人履歷網站">
+
   <title>林柏聖｜個人線上履歷</title>
 
   <!-- Bootstrap -->
@@ -17,8 +18,11 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-  <!-- 自訂 CSS -->
+  <!-- 原本 CSS -->
   <link href="style.css" rel="stylesheet">
+
+  <!-- 第九週新增 CSS -->
+  <link href="css/mystyles.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -31,7 +35,7 @@
 
       <span class="d-none d-lg-block">
         <img class="img-profile rounded-circle mx-auto mb-3"
-             src="profile.jpg"
+             src="profile.JPG"
              alt="林柏聖個人照片">
       </span>
     </a>
@@ -65,7 +69,10 @@
       <div class="resume-section-content">
 
         <h1 class="mb-0">林柏聖</h1>
-        <div class="subheading mb-4">世新大學・傳播管理學系</div>
+
+        <div class="subheading mb-4">
+          世新大學・傳播管理學系
+        </div>
 
         <p class="lead mb-4">
           我是林柏聖，目前就讀於世新大學傳播管理學系。
@@ -81,6 +88,7 @@
         </p>
 
         <div class="social-icons">
+
           <a class="social-icon"
              href="https://www.instagram.com/zzyj._.lin/"
              target="_blank" rel="noopener">
@@ -92,6 +100,7 @@
              target="_blank" rel="noopener">
             <i class="fab fa-github"></i>
           </a>
+
         </div>
 
       </div>
@@ -255,6 +264,7 @@
             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
             持續累積傳播企劃、數位內容與網頁設計相關作品
           </li>
+
           <li>
             <span class="fa-li"><i class="fas fa-certificate text-warning"></i></span>
             專業證照欄位：待取得正式證照後更新
@@ -266,55 +276,77 @@
 
     <hr class="m-0">
 
-    <!-- 作品集展示 -->
+    <!-- 第九週：Bento Box 作品集 -->
     <section class="resume-section" id="portfolio">
       <div class="resume-section-content">
 
-        <h2 class="mb-5">作品集展示</h2>
+        <h2 class="mb-3">作品集展示</h2>
+        <p class="portfolio-intro mb-5">
+          MY PORTFOLIO｜將課堂所學轉化為創意與實作成果。
+        </p>
 
-        <div class="resume-item">
-          <div>
+        <div class="bento-grid">
+
+          <!-- 作品一 -->
+          <article class="bento-item bento-feature">
+            <span class="bento-number">01</span>
+            <div class="bento-category">傳播企劃・短影音</div>
+            <i class="fas fa-utensils bento-icon"></i>
             <h3>校園美食推薦短影音</h3>
-            <div class="subheading mb-3">短影音企劃・兩級傳播理論</div>
             <p>
-              以校園周邊美食為主題，結合意見領袖概念，
-              透過實際體驗與資訊整理，
-              將餐廳特色轉化為適合社群平台觀看的短影音內容。
+              以兩級傳播理論為企劃基礎，結合意見領袖概念，
+              透過實際體驗與資訊整理，將餐廳特色轉化為適合
+              社群平台觀看的短影音內容。
             </p>
-            <a href="https://github.com/a114210016-boop" target="_blank" rel="noopener">
-              查看 GitHub 專案
+            <a href="https://github.com/a114210016-boop"
+               target="_blank" rel="noopener">
+              查看 GitHub <i class="fas fa-arrow-up-right-from-square"></i>
             </a>
-          </div>
-          <span class="text-primary">傳播企劃</span>
-        </div>
+          </article>
 
-        <div class="resume-item">
-          <div>
+          <!-- 作品二 -->
+          <article class="bento-item bento-orange">
+            <span class="bento-number">02</span>
+            <div class="bento-category">影像企劃</div>
+            <i class="fas fa-video bento-icon"></i>
             <h3>麥當勞招募廣告影片企劃</h3>
-            <div class="subheading mb-3">AI 影像・招募溝通</div>
             <p>
-              以年輕求職者為溝通對象，
-              規劃招募廣告的影像風格、旁白語氣及分鏡內容，
-              練習將人力資源議題轉化為具吸引力的媒體訊息。
+              以年輕求職者為溝通對象，規劃 AI 影像風格、
+              旁白語氣及分鏡內容，練習將人力資源議題
+              轉化為具吸引力的媒體訊息。
             </p>
-          </div>
-          <span class="text-primary">影像企劃</span>
-        </div>
+          </article>
 
-        <div class="resume-item">
-          <div>
+          <!-- 作品三 -->
+          <article class="bento-item bento-dark">
+            <span class="bento-number">03</span>
+            <div class="bento-category">網頁設計</div>
+            <i class="fas fa-code bento-icon"></i>
             <h3>個人線上履歷網站</h3>
-            <div class="subheading mb-3">HTML・CSS・Bootstrap・GitHub Pages</div>
             <p>
-              使用 Bootstrap 架構建立個人履歷網站，
+              使用 HTML、CSS 與 Bootstrap 建立個人履歷，
               整合個人介紹、學經歷、技能、興趣及作品集，
-              並透過 GitHub Pages 發布至網路。
+              並透過 GitHub Pages 發布。
             </p>
-            <a href="https://a114210016-boop.github.io/" target="_blank" rel="noopener">
-              瀏覽線上履歷網站
+            <a href="https://a114210016-boop.github.io/"
+               target="_blank" rel="noopener">
+              瀏覽網站 <i class="fas fa-arrow-up-right-from-square"></i>
             </a>
-          </div>
-          <span class="text-primary">網頁設計</span>
+          </article>
+
+          <!-- 作品四 -->
+          <article class="bento-item bento-light">
+            <span class="bento-number">04</span>
+            <div class="bento-category">行銷分析</div>
+            <i class="fas fa-bullhorn bento-icon"></i>
+            <h3>傳播與行銷案例分析</h3>
+            <p>
+              結合行銷理論與實際案例，
+              分析品牌策略、宣傳方式及社群傳播，
+              練習資料整理與簡報表達。
+            </p>
+          </article>
+
         </div>
 
       </div>
@@ -322,8 +354,10 @@
 
     <hr class="m-0">
 
+    <!-- 頁尾 -->
     <footer class="site-footer">
       <p>© 2026 林柏聖 All Rights Reserved.</p>
+      <a href="#page-top">Back to Top ↑</a>
     </footer>
 
   </main>
@@ -331,7 +365,7 @@
   <!-- Bootstrap JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- 自訂 JavaScript -->
+  <!-- 原本 JavaScript -->
   <script src="script.js"></script>
 
 </body>
