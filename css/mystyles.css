@@ -13,6 +13,9 @@
     --bs-primary: #bd5d38;
     --bs-primary-rgb: 189, 93, 56;
 
+    --bs-link-color: rgb(189, 93, 56);
+    --bs-link-hover-color: rgb(145, 67, 38);
+
     --resume-orange: #bd5d38;
     --resume-orange-dark: #914326;
 
@@ -42,7 +45,8 @@ p,
 a,
 span,
 div,
-li {
+li,
+.subheading {
     font-family:
         "Noto Sans TC",
         "Microsoft JhengHei",
@@ -64,6 +68,11 @@ h6 {
     font-weight: 900;
     text-transform: none;
     color: var(--resume-dark);
+}
+
+/* 依照老師範例，h2 標題保留大寫轉換設定 */
+h2 {
+    text-transform: uppercase;
 }
 
 
